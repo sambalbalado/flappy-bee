@@ -1,0 +1,126 @@
+:root {
+    background: linear-gradient(180deg, #6fcce3 0%, #dff6ec 100%);
+    min-height: 100%;
+    padding: 2em;
+    padding-top: 4em;
+}
+
+body,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td {
+    font-family: arial, helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: arial, helvetica, sans-serif;
+    font-weight: bolder;
+    color: #513719;
+    background-color: #ffd83d;
+    border-radius: 0.05em;
+    padding: 0.1em 0.1em 0.1em 0.1em;
+    box-shadow: 0 0.08em 0 #d69a21;
+    text-shadow: 2px 2px 0 #fff3a6;
+}
+
+.flex {
+    display: flex;
+    row-gap: 1em;
+    column-gap: 1em;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.86);
+    border-radius: 0.25em;
+    box-shadow: 0em 0em 0.5em rgb(20, 20, 20);
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+/* https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3 */
+.shadow {
+    -webkit-filter: drop-shadow(0px 0px 0.5px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(0px 0px 0.5px rgba(0, 0, 0, 0.7));
+}
+
+svg {
+    border-radius: 0.1em;
+    border: 5px solid rgb(77, 77, 77);
+}
+
+.pipe,
+#gameOver rect,
+#pause rect {
+    stroke: black;
+    stroke-width: 2px;
+}
+
+.heart {
+    fill: #ff2f5b;
+    stroke: #8f0929;
+    stroke-width: 1.5px;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.95));
+    pointer-events: none;
+}
+
+#svgCanvas {
+    background-color: #72d7ee;
+    overflow: hidden;
+}
+
+#sky,
+#cloudScroller,
+#groundScroller {
+    pointer-events: none;
+}
+
+.cloudSet {
+    fill: rgba(255, 255, 255, 0.88);
+    stroke: rgba(97, 188, 207, 0.35);
+    stroke-width: 2px;
+}
+
+#info {
+    width: 160px;
+    margin-top: 1em;
+}
+
+#info > .text {
+    font-weight: bold;
+}
+
+.left {
+    font-size: 1.1em;
+    float: left;
+}
+
+.right {
+    font-size: 1em;
+    float: right;
+}
+
+#gameOver {
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: center;
+}

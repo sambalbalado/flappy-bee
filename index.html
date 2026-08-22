@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Flappy Bee</title>
+    </head>
+    <body>
+        <h1>Flappy Bee</h1>
+        <main id="main" class="flex col">
+            <svg id="svgCanvas" width="600" height="400">
+                <defs>
+                    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#72d7ee"></stop>
+                        <stop offset="100%" stop-color="#d7f5ed"></stop>
+                    </linearGradient>
+                    <pattern id="groundPattern" width="36" height="20" patternUnits="userSpaceOnUse">
+                        <rect width="36" height="20" fill="#d9a441"></rect>
+                        <rect x="4" y="7" width="8" height="4" fill="#bd7d32"></rect>
+                        <rect x="23" y="13" width="7" height="4" fill="#f2c45d"></rect>
+                    </pattern>
+                </defs>
+
+                <rect id="sky" width="600" height="400" fill="url(#skyGradient)"></rect>
+
+                <g id="cloudScroller" aria-hidden="true">
+                    <g class="cloudSet">
+                        <g transform="translate(35 68)">
+                            <ellipse cx="34" cy="22" rx="34" ry="17"></ellipse>
+                            <circle cx="34" cy="11" r="19"></circle>
+                            <circle cx="58" cy="20" r="23"></circle>
+                        </g>
+                        <g transform="translate(235 125) scale(.72)">
+                            <ellipse cx="34" cy="22" rx="34" ry="17"></ellipse>
+                            <circle cx="34" cy="11" r="19"></circle>
+                            <circle cx="58" cy="20" r="23"></circle>
+                        </g>
+                        <g transform="translate(435 48) scale(.9)">
+                            <ellipse cx="34" cy="22" rx="34" ry="17"></ellipse>
+                            <circle cx="34" cy="11" r="19"></circle>
+                            <circle cx="58" cy="20" r="23"></circle>
+                        </g>
+                    </g>
+                    <g class="cloudSet" transform="translate(600 0)">
+                        <g transform="translate(35 68)">
+                            <ellipse cx="34" cy="22" rx="34" ry="17"></ellipse>
+                            <circle cx="34" cy="11" r="19"></circle>
+                            <circle cx="58" cy="20" r="23"></circle>
+                        </g>
+                        <g transform="translate(235 125) scale(.72)">
+                            <ellipse cx="34" cy="22" rx="34" ry="17"></ellipse>
+                            <circle cx="34" cy="11" r="19"></circle>
+                            <circle cx="58" cy="20" r="23"></circle>
+                        </g>
+                        <g transform="translate(435 48) scale(.9)">
+                            <ellipse cx="34" cy="22" rx="34" ry="17"></ellipse>
+                            <circle cx="34" cy="11" r="19"></circle>
+                            <circle cx="58" cy="20" r="23"></circle>
+                        </g>
+                    </g>
+                </g>
+
+                <g id="groundScroller" aria-hidden="true">
+                    <g>
+                        <rect x="0" y="380" width="600" height="20" fill="url(#groundPattern)"></rect>
+                        <rect x="0" y="380" width="600" height="5" fill="#74bf2e"></rect>
+                        <rect x="0" y="385" width="600" height="3" fill="#b7df45"></rect>
+                    </g>
+                    <g transform="translate(600 0)">
+                        <rect x="0" y="380" width="600" height="20" fill="url(#groundPattern)"></rect>
+                        <rect x="0" y="380" width="600" height="5" fill="#74bf2e"></rect>
+                        <rect x="0" y="385" width="600" height="3" fill="#b7df45"></rect>
+                    </g>
+                </g>
+                <g id="gameOver" visibility="hidden">
+                    <rect
+                        x="225"
+                        y="176"
+                        fill="white"
+                        height="50"
+                        width="150"
+                    ></rect>
+                    <text x="235" y="201">
+                        Game Over
+                        <tspan x="243" y = "200" dy="18" font-size="12">Press "R" to restart</tspan>
+                    </text>
+                </g>
+                <g id="pause" cursor="pointer">
+                    <rect
+                      x="10"
+                      y="10"
+                      width="80"
+                      height="30"
+                      rx="5"
+                      ry="5"
+                      fill="#333"
+                      stroke="white"
+                    ></rect>
+                    <text
+                      x="50"
+                      y="30"
+                      text-anchor="middle"
+                      fill="white"
+                      font-size="16"
+                      font-family="sans-serif"
+                    >
+                      Pause
+                    </text>
+                  </g>
+            </svg>
+            <div style="width: 600px; text-align: right; margin-top: 5px; font-size: 13px; color: rgb(0, 0, 0); font-family: sans-serif;">
+                Press <strong>"Escape"</strong> key to pause/resume
+              </div>
+            <div id="sideBar" class="flex col">
+                <div id="info" class="flex col">
+                    <div class="text">
+                        <span class="left">Lives: </span>
+                        <span class="right" id="livesText">...</span>
+                    </div>
+                    <div class="text">
+                        <span class="left">Score: </span>
+                        <span class="right" id="scoreText">...</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script type="module" src="./src/main.ts"></script>
+    </body>
+</html>
