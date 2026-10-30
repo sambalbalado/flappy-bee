@@ -2,6 +2,8 @@
 
 A small browser game inspired by the classic side-scrolling flappy genre. Guide a pixel-art bee through the pipes while the clouds and ground scroll across the scene.
 
+![Flappy Bee pixel-art character](assets/bee.png)
+
 ## Features
 
 - Reactive game logic powered by RxJS
