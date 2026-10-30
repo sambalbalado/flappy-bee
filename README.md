@@ -4,6 +4,10 @@ A small browser game inspired by the classic side-scrolling flappy genre. Guide 
 
 ![Flappy Bee pixel-art character](assets/bee.png)
 
+## Gameplay
+
+![Flappy Bee gameplay showing the bee navigating green pipes, with lives and score displayed](assets/flappy-bee-gameplay.png)
+
 ## Features
 
 - Reactive game logic powered by RxJS
